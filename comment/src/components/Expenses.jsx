@@ -1,11 +1,13 @@
-import ExpenseItem from './ExpenseItem';
-import './ExpenseItem.css'
-const Expenses = () => {
-    return (
+import ExpenseItem from "./ExpenseItem"; 
 
-        <div>
-        <ExpenseItem/> 
-        </div>
-    )
+function Expenses(props) {
+  const exp = props.expense 
+  return (
+    <div>
+      <ExpenseItem title={exp[0].title} date = {exp[0].date} amount = {exp[0].amount}/>
+      <ExpenseItem title={exp[1].title} date = {exp[1].date} amount = {exp[1].amount}/>
+    </div>
+  );
 }
-export default Expenses
+
+export default Expenses;
